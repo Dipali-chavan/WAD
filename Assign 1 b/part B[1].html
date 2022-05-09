@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Text Input Control</title>
+   </head>
+	
+   <body>
+      <!--<script src="local.js"></script> -->
+      <form >
+         Username: <input type = "text" name = "user" id="user" placeholder="Username" />
+         <br>
+         Phone: <input type = "text" name = "mobile" id="contact" placeholder="mobileno" />
+         <br>
+         Email: <input type = "text" name = "email" id="email" placeholder="Enter email" />
+         <br>
+         password : <input type = "password" name = "pass" id="pass" placeholder="Enter pass"/>
+         <br>
+         Confirm Password: <input type = "text" name = "conpass" id="conpass" placeholder="Username" />
+         <br>
+         <button type="submit" onclick="saveData()">Submit</button>
+      </form>
+      <script>
+         function saveData()
+         {
+            let user,email,contact,psw;
+            user = document.getElementById('user').value;
+            email = document.getElementById('email').value;
+            contact = document.getElementById('contact').value;
+            pwd = document.getElementById('pass').value;
+            
+            localStorage.setItem("Username",user);
+            localStorage.setItem("Email",email);
+            localStorage.setItem("Mobile no",contact);
+            localStorage.setItem("password",psw);
+
+         }
+      </script>
+   
+
+   </body>
+	
+</html>
